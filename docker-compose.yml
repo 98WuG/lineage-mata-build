@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    lineage:
+        image: lineage
+        build: .
+        container_name: lineage
+        restart: unless-stopped
+        volumes:
+            - ./lineage:/home/user/lineage
+            - ./patch:/home/user/patch
