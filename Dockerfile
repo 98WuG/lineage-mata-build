@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER 98WuG <gwu02251250@gmail.com>
+MAINTAINER Gerald Wu <gerald@geraldwu.com>
 
 RUN apt-get update && \
     apt-get install -y \
