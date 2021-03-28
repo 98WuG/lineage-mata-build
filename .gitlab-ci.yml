@@ -13,7 +13,7 @@ build:
   stage: build
   before_script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login --username $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
-    - export DATE_TAG="$(date '+Y-%m-%d')"
+    - export DATE_TAG="$(date '+%Y-%m-%d')"
   script:
     - docker build -t $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$DATE_TAG .
     - docker push $CI_REGISTRY_IMAGE:latest
